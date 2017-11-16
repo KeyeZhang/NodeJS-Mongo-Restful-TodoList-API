@@ -1,14 +1,10 @@
-# MP #3: APIed Piper
-### Due: November 6th, 2017, 11.59PM CDT
+# NodeJS-Mongo-Restful-TodoList-API
 
 ## Table of Contents
-1. [Assignment](#assignment)
-2. [Tips](#tips)
-3. [Rules](#rules)
-4. [Environment Setup Guide](#environment-setup-guide)
-5. [Submission Details](#submission-details)
+1. [Introduction](#Introduction)
+2. [Environment Setup Guide](#environment-setup-guide)
 
-## Assignment
+## Introduction
 
 **The Basic Goal** : Create an API for a task management / todo list.
 
@@ -109,35 +105,6 @@ Here is the Task Schema:
     - Multiple users with the same email cannot exist.
     - Tasks cannot be created (or updated) without a name or a deadline. All other fields that the user did not specify should be set to reasonable values.
 
-## Tips
-  - Start early!
-  - Please DO NOT delete the `.gitignore file` from the project
-  - Check out [Postman](https://www.getpostman.com/postman) to your API
-
-### How to use the DB Scripts
-
-Assuming your API is fully operational (you need to have implement /users and /tasks endpoints for your API), these scripts will populate and clear your database as needed.
-
-**dbClean.py**
-
-`python dbClean.py -u "yoururl.com" -p 4000 `
-
-You can change "yoururl.com" and the port number to match your own database. Leave the quotation marks. DO NOT include "/api/" or "/user" etc. If these parameters are not specified, this script will, by default, clear out the http://uiucwp.com:4000 database.
-
-**dbFill.py**
-
-`python dbFill.py -u "yoururl.com" -p 4000 -n 10 -t 30`
-
-Once again, change the url and port number to match your database. You can populate your database with X users and Y tasks (in the above case, 10 and 30 respectively). This will randomly generate users with realistic names and emails as well as realistic tasks. Tasks will have a 50% chance of being completed and a 60% chance of being assigned. If num_tasks >> num_users, users will likely have multiple tasks assigned to them. A task will have one assigned user at most.
-
-**task.txt**
-
-Contains sample task descriptions. Edit if you want, I don't care.  
-
-## Rules
-1. This is an individual assignment. No collaboration is permitted.
-2. It is not permitted to copy/paste code that is not your own. You are, however, free to look at different code sources for inspiration and clarity. All sources (code as well as reading material) that you reference to complete this assignment must be declared in the submission.
-3. If you think something you’re doing might not be acceptable, please ask on Piazza.
 
 ## Environment Setup Guide
 1. Clone the repository:
@@ -148,6 +115,4 @@ Contains sample task descriptions. Edit if you want, I don't care.
 `npm start` or
 `nodemon --exec node server.js` to automatically restart the server on save.
 
-## Submission Details
-1. [Submission Form](https://goo.gl/forms/uEawyS1GaDNk8xaN2)
-2. You need to also submit at [the submission website](http://uiucwp.com)
+
